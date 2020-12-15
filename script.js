@@ -11,14 +11,36 @@ function generatePassword() {
   var characterArray = ["@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+"];
 
 
-  // password criteria
-  var charLength = prompt("Choose length of password between 8 and 128");
+  // conditions for password length
+  var charLength = parseInt(prompt("Choose length of password between 8 and 128"));
+
+  if (charLength < 8) {
+    alert("Invalid number! Password must be above 8 characters");
+  }
+
+  if (charLength > 128) {
+    alert("invalid number! Password must be below 128 char");
+  }
+
+  if (isNaN(charLength) === true) {
+    alert("The password length must be provided as a number.");
+    return;
+  }
   var numbers = confirm("Do you want numbers in your password?");
-  var uppercase = confirm("Do you want Uppercase letters in your password?");
-  var lowercase = confirm("Do you want lowercase letters in your password?");
+  var upperCase = confirm("Do you want Uppercase letters in your password?");
+  var lowerCase = confirm("Do you want lowercase letters in your password?");
   var characters = confirm("Do you want special characters in your password?");
 
 
+  //Condition for password validation
+  if (upperCase === false &&
+    lowerCase === false &&
+    numbers === false &&
+    characters === false) {
+    alert("You must select at least one type of character."); return;
+  }
+
+  console.log(charLength)
 
 
   //Empty arrays to randomize the characters and to display it
@@ -34,12 +56,12 @@ function generatePassword() {
 
   }
 
-  if (uppercase) {
+  if (upperCase) {
     resultArray = resultArray.concat(uppercaseArray);
 
   }
 
-  if (lowercase) {
+  if (lowerCase) {
     resultArray = resultArray.concat(lowercaseArray);
 
   }
@@ -68,7 +90,7 @@ function generatePassword() {
 
 }
 
-
+// function to display generated password on the screen
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
