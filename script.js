@@ -56,7 +56,14 @@ function generatePassword() {
   var displayedArray = [];
 
 
+  // for loop to randomize the password from the result array
 
+  for (var i = 0; i < charLength; i++) {
+
+    displayedArray.push(resultArray[Math.floor(Math.random() * resultArray.length)]);
+  }
+
+  return displayedArray.join("");
 
 
 }
