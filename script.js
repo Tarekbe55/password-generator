@@ -36,10 +36,7 @@ function generatePassword() {
 
 
   //Condition for password validation
-  if (upperCase === false &&
-    lowerCase === false &&
-    numbers === false &&
-    characters === false) {
+  if (upperCase === false && lowerCase === false && numbers === false && characters === false) {
     alert("You must select at least one type of character."); return;
   }
 
@@ -53,7 +50,7 @@ function generatePassword() {
 
 
 
-  //conditions of Array
+  //conditions of Array. If any of the questions are true, it will add the to the result array
   if (numbers) {
     resultArray = resultArray.concat(numArray);
 
