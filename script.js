@@ -16,11 +16,14 @@ function generatePassword() {
 
   if (charLength < 8) {
     alert("Invalid number! Password must be above 8 characters");
+    return;
   }
 
   if (charLength > 128) {
     alert("invalid number! Password must be below 128 char");
+    return;
   }
+
 
   if (isNaN(charLength) === true) {
     alert("The password length must be provided as a number.");
