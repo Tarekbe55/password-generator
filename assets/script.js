@@ -20,7 +20,7 @@ function generatePassword() {
   }
 
   if (charLength > 128) {
-    alert("invalid number! Password must be below 128 char");
+    alert("invalid number! Password must be below 128 characters");
     return;
   }
 
