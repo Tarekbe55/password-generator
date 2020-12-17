@@ -1,7 +1,7 @@
 # PasswordGenerator
 JS Homework Assignment (Password Generator)
 
-# Prerequisites 
+# Requirement 
 Web based password generator- internet connection is needed
 
 # Directions
@@ -9,10 +9,10 @@ Web based password generator- internet connection is needed
 2. Select "Generate Password" 
 3. You will then be alerted with 4 prompts on the make up of your password (uppercase, lowercase, numbers and special characters)
 4. Then password will be generated with the criteria that was picked
-ß
+
 # Tech/framework used
 HTML, CSS, JavaScript 
-ß
+
 # Authors
 Tarek Behairy
 
